@@ -5,14 +5,16 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/settings"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+        <item
+            android:id="@+id/chat"
+            android:title="Chat" />
+        <item
             android:id="@+id/homeFragment"
             android:title="@string/menu_home" />
-        <item
-            android:id="@+id/profileFragment"
-            android:title="Profile" />
-        <item
-            android:id="@+id/signOutFragment"
-            android:title="Sign Out" />
+
     </group>
 
 </menu>
