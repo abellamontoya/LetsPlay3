@@ -15,8 +15,9 @@
         android:adjustViewBounds="true"
         app:layout_constraintBottom_toTopOf="@+id/busqueda"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="40dp"
         android:src="@drawable/user"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"/>
 

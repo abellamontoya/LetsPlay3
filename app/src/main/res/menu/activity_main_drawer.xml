@@ -9,11 +9,14 @@
             android:title="Settings"
             android:icon="@drawable/settings"/>
         <item
-            android:id="@+id/chat"
-            android:title="Chat" />
+            android:id="@+id/contactsFragment"
+            android:title="Chat"
+            android:icon="@drawable/baseline_message_24"
+            />
         <item
             android:id="@+id/homeFragment"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home"
+            android:icon="@drawable/baseline_house_24"/>
 
     </group>
 

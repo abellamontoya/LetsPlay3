@@ -28,9 +28,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
-    NavController navController;   // <-----------------
+    NavController navController;
     public AppViewModel appViewModel;
     public String authorPhotoUrl;
+    ImageView photo;
 
 
     @Override
@@ -43,7 +44,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        navController = Navigation.findNavController(view);  // <-----------------
+        navController = Navigation.findNavController(view);
 
         appViewModel = new ViewModelProvider(requireActivity()).get(AppViewModel.class);
 
@@ -63,6 +64,9 @@ public class HomeFragment extends Fragment {
                 .build();
 
         postsRecyclerView.setAdapter(new PostsAdapter(options));
+        photo = view.findViewById(R.id.photoImageView);
+        String url = FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl().toString();
+            Glide.with(getContext()).load(url).circleCrop().into(photo);
     }
 
     class PostsAdapter extends FirestoreRecyclerAdapter<Post, PostsAdapter.PostViewHolder> {
@@ -72,6 +76,7 @@ public class HomeFragment extends Fragment {
         @Override
         public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             return new PostViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_post, parent, false));
+
         }
 
         @Override
