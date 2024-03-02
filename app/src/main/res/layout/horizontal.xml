@@ -2,21 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/HorizontalRecycler">
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="60dp"
-    android:layout_height="60dp"
-    android:layout_margin="8dp"
-    android:elevation="4dp"
-    app:cardCornerRadius="50dp">
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="30dp">
 
-    <ImageView
-        android:id="@+id/photoImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/user"
-        android:scaleType="centerCrop" />
-</androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/photoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/user"
+            android:scaleType="centerCrop" />
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
