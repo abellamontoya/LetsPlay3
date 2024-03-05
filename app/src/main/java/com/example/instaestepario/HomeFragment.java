@@ -54,6 +54,15 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.newPostFragment);
             }
         });
+
+        // Set click listener for photoImageView
+        photo = view.findViewById(R.id.photoImageView);
+        photo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.profileFragment);
+            }
+        });
         RecyclerView postsRecyclerView = view.findViewById(R.id.postsRecyclerView);
 
         Query query = FirebaseFirestore.getInstance().collection("posts").orderBy("timeStamp", Query.Direction.DESCENDING).limit(50);

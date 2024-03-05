@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
     <ImageView
         android:id="@+id/photoImageView"
-        android:layout_width="254dp"
-        android:layout_height="wrap_content"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user"
+        android:scaleType="centerCrop" />
+
     <TextView
         android:id="@+id/displayNameTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/photoImageView"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="Nombre de Usuario"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingTop="16dp"/>
+
     <TextView
         android:id="@+id/emailTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/displayNameTextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:text="correo@ejemplo.com"
+        android:textColor="@android:color/darker_gray"
+        android:paddingTop="8dp"/>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/back"/>
+</RelativeLayout>
