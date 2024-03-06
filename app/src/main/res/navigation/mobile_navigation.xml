@@ -56,4 +56,14 @@
         android:name="com.example.instaestepario.SplashScreen"
         android:label="activity_splash_screen"
         tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.instaestepario.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.instaestepario.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

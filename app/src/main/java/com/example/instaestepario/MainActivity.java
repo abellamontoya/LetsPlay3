@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDestinationChanged(@NonNull NavController controller,
                                              @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                if (destination.getId() == R.id.signInFragment || destination.getId() == R.id.registerFragment|| destination.getId() == R.id.mediaFragment) {
+                if (destination.getId() == R.id.signInFragment || destination.getId() == R.id.registerFragment || destination.getId() == R.id.mediaFragment || destination.getId() == R.id.profileFragment || destination.getId() == R.id.settingsFragment
+                        || destination.getId() == R.id.chat || destination.getId() == R.id.mapFragment) {
                     binding.bottomNavView.setVisibility(View.GONE);
                 } else {
                     binding.bottomNavView.setVisibility(View.VISIBLE);

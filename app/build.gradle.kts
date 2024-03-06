@@ -64,7 +64,7 @@ dependencies {
     implementation ("com.firebaseui:firebase-ui-database:8.0.2")
     implementation ("com.firebaseui:firebase-ui-auth:8.0.2")
     implementation ("com.firebaseui:firebase-ui-storage:8.0.2")
-
+    implementation ("com.github.chrisbanes:PhotoView:latest_version")
     implementation ("com.google.android.material:material:<1.11.0>")
 
     implementation ("com.airbnb.android:lottie:3.7.0")

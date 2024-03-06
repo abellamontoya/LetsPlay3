@@ -80,7 +80,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Contenido"/>
+                android:text="Contenido"
+                android:textColor="@color/white"/>
 
             <LinearLayout
                 android:id="@+id/likeLinearLayout"
@@ -103,15 +104,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_gravity="center_vertical"
-                    android:text="200K"/>
+                    android:text="200K"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/dateTextView"
+                    android:layout_marginStart="180dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
                     android:layout_gravity="center_vertical"
-                    android:text="DD/MM/AAAA HH:MM"/>
+                    android:text="DD/MM/AAAA HH:MM"
+                    android:textColor="@color/white" />
 
             </LinearLayout>
         </LinearLayout>

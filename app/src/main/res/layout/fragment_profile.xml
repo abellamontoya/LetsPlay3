@@ -1,47 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="@color/yellow">
 
     <ImageView
         android:id="@+id/photoImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="46dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/user"
-        android:scaleType="centerCrop" />
+        android:background="@drawable/rounded_edittext_background"/>
 
     <TextView
         android:id="@+id/displayNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/photoImageView"
-        android:layout_centerHorizontal="true"
-        android:textSize="20sp"
+        android:layout_marginTop="16dp"
         android:text="Nombre de Usuario"
-        android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:paddingTop="16dp"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/photoImageView"
+        app:layout_constraintTop_toBottomOf="@id/photoImageView" />
 
     <TextView
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/displayNameTextView"
-        android:layout_centerHorizontal="true"
-        android:textSize="16sp"
         android:text="correo@ejemplo.com"
-        android:textColor="@android:color/darker_gray"
-        android:paddingTop="8dp"/>
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/displayNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/displayNameTextView" />
 
     <ImageButton
         android:id="@+id/backButton"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_margin="16dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/back"/>
-</RelativeLayout>
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/profileStatsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/photoImageView"
+        app:layout_constraintTop_toTopOf="@id/photoImageView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/postsCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publicaciones"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/followersCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguidores"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/followingCountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguidos"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/settingsIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTextView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="206dp"
+                android:layout_height="206dp"
+                android:padding="1dp"
+                android:background="@drawable/button_border"
+                android:src="@drawable/mcp"></ImageView>
+
+            <ImageView
+                android:layout_width="206dp"
+                android:layout_height="206dp"
+                android:padding="1dp"
+                android:background="@drawable/button_border"
+                android:src="@drawable/fivepebble"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="206dp"
+                android:layout_height="206dp"
+                android:padding="1dp"
+                android:background="@drawable/button_border"
+                android:src="@drawable/steelydan"></ImageView>
+
+            <ImageView
+                android:layout_width="206dp"
+                android:layout_height="206dp"
+                android:padding="1dp"
+                android:background="@drawable/button_border"
+                android:src="@drawable/weatherday"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="206dp"
+                android:background="@drawable/button_border"
+                android:layout_height="206dp"
+                android:padding="1dp"
+                android:src="@drawable/p3r"></ImageView>
+
+            <ImageView
+                android:layout_width="206dp"
+                android:layout_height="206dp"
+                android:padding="1dp"></ImageView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
